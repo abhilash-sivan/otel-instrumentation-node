@@ -10,14 +10,13 @@ const express = require('express');
 const PORT = parseInt(process.env.PORT || '3001');
 const app = express();
 
-
 function getRandomNumber(min, max) {
   // Start a new span to trace the function execution
   const span = tracer.startSpan('getRandomNumber', {
     kind: SpanKind.INTERNAL,
     attributes: { 'dice.min': min, 'dice.max': max },
   });
-
+  span.addEvent('Doing something in getRandomNumber fn');
   try {
     return Math.floor(Math.random() * (max - min + 1) + min);
   } finally {

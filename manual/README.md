@@ -10,7 +10,9 @@ npm install --save @opentelemetry/api \
                  @opentelemetry/sdk-trace-node \
                  @opentelemetry/sdk-metrics \
                  @opentelemetry/resources \
-                 @opentelemetry/auto-instrumentations-node
+                 @opentelemetry/auto-instrumentations-node \
+                 @opentelemetry/sdk-metrics
+
 ```
 
 ## OpenTelemetry Instrumentation
